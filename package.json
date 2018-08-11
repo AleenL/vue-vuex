@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/iview/iview-project.git"
   },
-  "author": "Aresn",
+  "author": "Allen",
   "license": "MIT",
   "dependencies": {
     "echarts": "^4.1.0",
