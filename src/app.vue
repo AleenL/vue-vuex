@@ -18,7 +18,9 @@
 
         },
         methods: {
-
+					find(){
+						console.log(1)
+					}
         }
     }
 </script>
