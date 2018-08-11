@@ -70,10 +70,8 @@
 					}
 				}
 			},
-			$route(){
-				this.showHeight()
-			}
 		},
+		
 		name: 'HelloWorld',
 		props: {
 			msg: String
