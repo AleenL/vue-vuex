@@ -13,7 +13,7 @@ const leftSideData=[
 	{title:'模块',type:'ios-analytics',name:'1',children:[
 		{title:'卡片显示',target:'/card',children:[],name:'1-1'},
 		{title:'状态显示',target:'/popur',children:[],name:'1-2'},
-		{title:'数据显示',target:'/',children:[],name:'1-3'},
+		{title:'时间轴',target:'/',children:[],name:'1-3'},
 		{title:'进度条',target:'/',children:[],name:'1-4'},
 	]},
 	{title:'组件',type:'ios-filing',name:'2',children:[
