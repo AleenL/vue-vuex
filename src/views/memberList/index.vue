@@ -12,7 +12,7 @@
 				<p>你确认删除这位会员吗？</p>
 			</div>
 			<div slot="footer">
-				<Button type="error" size="large" long :loading="modal_loading" @click="del">确认</Button>
+				<Button type="error" size="large" long :loading="true" @click="del">确认</Button>
 			</div>
 		</Modal>
 		<div class="member-header height-40 bg-40 width-all bor-rad-5 space-between-center pl-10 pr-10">

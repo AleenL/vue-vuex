@@ -4,6 +4,12 @@ li{
 .bg-black{
 	background: #222428;
 }
+.bg-black-4{
+	background: rgba(22,24,28,.4);
+}
+.bg-black-7{
+	background: rgba(22,24,28,.7);
+}
 .bg-orgin{
 	background: #FFB400;
 }
@@ -135,6 +141,9 @@ li{
 }
 .mb-20{
 	margin-bottom: 20px;
+}
+.padding-5{
+	padding:5px;
 }
 .padding-10{
 	padding:10px;
@@ -324,6 +333,12 @@ li{
 }
 .width-200{
 	width:200px;
+}
+.width-300{
+	width:300px;
+}
+.width-350{
+	width:350px;
 }
 .width-all{
 	width:100%

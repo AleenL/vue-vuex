@@ -1,6 +1,7 @@
 <template>
-	<div class="flex-start-header width-all">
-		<div :class="['left-side-box', 'over-hidden', leftActive ? 'width-75' : 'width-200']">
+	<div class="flex-start-header width-all" >
+		<BackTop :height="100"></BackTop>
+		<div :class="['left-side-box', 'over-hidden', leftActive ? 'width-75' : 'width-200']" :style="[windowHeight]">
 			<div class="width-all flex-center flex-co height-100">
 				<p class="font-22 font-900 color-40 width-40 height-40 bg-ff flex-center">東</p>
 			</div>
@@ -19,15 +20,32 @@
 			</Menu>
 			<wxc-left-side v-else=""  :activeName="activeName" @changeTarget="changeTarget"></wxc-left-side>
 		</div>
-		<div class="wrap-content flex-1 flex-center flex-co width-all">
+		<div class="wrap-content flex-1 flex-center flex-co width-all" ref="window">
 			<header class="bg-ff space-between-center pl-20 pr-20 width-all">
 				<div class="line-70 color-40 space-between-center">
 					<Icon type="md-menu" :class="['color-40', 'font-30', 'mr-20', leftActive ? 'clickActive' : 'clickOut' ]" @click="showSide"/>
 					<p class="color-40 font-15">{{title}}</p>
 				</div>
-				<h3 class="color-f3 line-70">hello</h3>
+				<div class="space-between-center width-350">
+					<div class="space-between-center width-100">
+						<Badge dot>
+							<Icon type="ios-alarm" size="26" class="padding-5 bg-40 bor-rad-5 flex-center color-f3"/>
+						</Badge>
+						<Badge :count="1">
+							<Icon type="ios-chatbubbles" size="26" class="padding-5 bg-40 bor-rad-5 flex-center color-f3"/>
+						</Badge>
+					</div>
+					<div class="avatar-box width-200 height-50 bor-rad-5 flex-start-center">
+						<Avatar style="color: #f3f3f3;background-color: #40475b;font-weight:900" class="ml-10 mr-10">東</Avatar>
+						<div>
+							<p class="font-500">HI!黄浩東</p>
+							<p class="font-500">2018年 8月 21日 晴 23˚C</p>
+						</div>
+					</div>
+				</div>
 			</header>
-			<div class="right-side-box flex-1 width-all">
+			<div class="right-side-box flex-1 width-all" >
+				
 				<router-view></router-view>
 			</div>
 		</div>
@@ -51,6 +69,9 @@
 						this.title = this.config[this.activeName.substr(0,1)].children[this.activeName.substr(2,1)-1].title
 					}
 				}
+			},
+			$route(){
+				this.showHeight()
 			}
 		},
 		name: 'HelloWorld',
@@ -62,12 +83,16 @@
 			message: '1',
 			leftActive: false,
 			activeName:'0',
-			title:'首页'
+			title:'首页',
+			windowHeight:{height:'100vh'}
 		}),
-		created() {
-		
+		mounted(){
+			this.showHeight()
 		},
 		methods: {
+			showHeight(){
+				this.windowHeight = {height:this.$refs.window.offsetHeight+'px'}
+			},
 			showSide(){
 				this.leftActive = !this.leftActive
 			},
@@ -92,8 +117,8 @@
 	
 	header{
 		box-shadow: 2px 2px 10px #c1c1c1;
-		height:9vh;
-		min-height:50px;
+		height:10vh;
+		min-height:70px;
 	}
 	
 	.clickActive{
@@ -107,7 +132,6 @@
 	
 	.left-side-box {
 		min-height:100vh;
-		height:100%;
 		background: rgb(49,54,73);
 		transition: width 0.3s;
 		
@@ -116,5 +140,8 @@
 		min-width: 600px;
 		overflow: hidden;
 	}
-
+	.avatar-box{
+		box-shadow: inset 0 -1px 10px rgba( 255, 255, 250, 0.6),
+		inset 0 -2px 10px rgba( 0, 0, 0, 0.1);
+	}
 </style>
