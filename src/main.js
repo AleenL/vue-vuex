@@ -5,9 +5,12 @@ import Routers from './router';
 import Util from './libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
+import mavonEditor from 'mavon-editor';
+import 'mavon-editor/dist/css/index.css'
 
 Vue.use(VueRouter);
 Vue.use(iView);
+Vue.use(mavonEditor)
 
 // 路由配置
 const RouterConfig = {

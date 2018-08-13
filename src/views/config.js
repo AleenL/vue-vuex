@@ -23,7 +23,7 @@ const leftSideData=[
 	]},
 	{title:'表单',type:'md-pie',target:'/echarts',name:'3',children:[]},
 	{title:'文本',type:'ios-filing',name:'4',children:[
-		{title:'makedown',target:'/',children:[],name:'4-1',},
+		{title:'makedown',target:'/makedown',children:[],name:'4-1',},
 		{title:'富文本',target:'/',children:[],name:'4-2',},
 		{title:'上传文件',target:'/',children:[],name:'4-3',},
 		{title:'按钮提示',target:'/',children:[],name:'4-4',},

@@ -21,6 +21,13 @@ const routers = [
 				component: (resolve) => require(['./views/echarts/index.vue'], resolve)
 			},
 			{
+				path:'/makedown',
+				meta:{
+				
+				},
+				component: (resolve) => require(['./views/makeDown/index.vue'], resolve)
+			},
+			{
 				path:'/world',
 				meta:{
 				

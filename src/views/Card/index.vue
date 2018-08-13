@@ -66,8 +66,8 @@
 				cardStyle:[
 					{style:'超大卡片',animate:'左下浮起',cardClass:'biggestCard',animateClass:'list-items'},
 					{style:'大卡片',animate:'右下浮起',cardClass:'bigCard',animateClass:'list-items-right-bottom'},
-					{style:'中卡片(多选)',animate:'右上浮起',cardClass:'middleCard',animateClass:'list-items-right-top',choose:'moreChoose'},
-					{style:'小卡片(单选)',animate:'左上浮起',cardClass:'littleCard',animateClass:'list-items-left-top',choose:'signChoose'},
+					{style:'中卡片(多选)',animate:'',cardClass:'middleCard',animateClass:'',choose:'moreChoose'},
+					{style:'小卡片(单选)',animate:'',cardClass:'littleCard',animateClass:'',choose:'signChoose'},
 				],
 				cardContent:[
 					{icon:'ios-school',styleName:'school',name:'在校大学生',value:'3456',colorClass:'color-22'},
